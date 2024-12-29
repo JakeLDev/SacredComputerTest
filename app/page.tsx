@@ -21,6 +21,7 @@ import CanvasPlatformer from '@components/CanvasPlatformer';
 import CanvasSnake from '@components/CanvasSnake';
 import Card from '@components/Card';
 import CardDouble from '@components/CardDouble';
+import Dropdown from '@root/components/Dropdown';
 import Checkbox from '@components/Checkbox';
 import DataTable from '@components/DataTable';
 import DatePicker from '@components/DatePicker';
@@ -581,11 +582,13 @@ export default async function Page(props) {
           <Card title="EXAMPLE">WORK IN PROGRESS</Card>
         </Accordion>
 
-        <Accordion defaultValue={false} title="DROPDOWN">
+        <Accordion defaultValue={true} title="DROPDOWN">
           A dropdown is an interactive element that lets users select an option from a collapsible menu, saving space by hiding options until needed. Commonly used in forms, action menus, or filters, Dropdowns support single or multi-selection and sometimes search.
           <br />
           <br />
-          <Card title="EXAMPLE">WORK IN PROGRESS</Card>
+          <Card title="EXAMPLE">
+            <Dropdown name='dropdown test' options={['Option 1', 'Option 2', 'Option 3', "Option 4issuperreallylongandmightlook shit"]} />
+          </Card>
         </Accordion>
 
         <Accordion defaultValue={false} title="EMPTY STATE">
